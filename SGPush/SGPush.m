@@ -50,6 +50,10 @@
 
 + (void)handleRemotePush:(NSDictionary *)info
 {
+    if (info == nil) {
+        return;
+    }
+    
     UIApplicationState state = [UIApplication sharedApplication].applicationState;
     
     SGPush *push = [SGPush sharedPush];
