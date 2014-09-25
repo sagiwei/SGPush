@@ -9,11 +9,11 @@ SGPush
 SGPush 将处理远程推送时所需的头文件引用、逻辑代码封装到 SGPushHandler 的子类中，当点击远程推送消息打开应用或应用开启状态下接收到远程推送消息时自动执行相应的处理逻辑。
 
 ###结构
-|类|描述|
-|-|-|
-|`SGPush`|核心类，管理注册的`SGPushHandler`子类，接管系统接收到的远程推送消息|
-|`SGPushHandler`|推送数据以及相应处理逻辑的封装类，请根据具体业务需求创建不同的子类并在 `executeFromViewController:` 方法中实现推送处理逻辑，该类本身不可直接使用。
-|`UIViewController+SGPush`|提供`canHandleRemotePush:`方法，不同的视图控制器可根据需求选择处理或不处理推送消息|
+类|描述
+-----|----
+`SGPush`|核心类，管理注册的`SGPushHandler`子类，接管系统接收到的远程推送消息
+`SGPushHandler`|推送数据以及相应处理逻辑的封装类，请根据具体业务需求创建不同的子类并在 `executeFromViewController:` 方法中实现推送处理逻辑，该类本身不可直接使用。
+`UIViewController+SGPush`|提供`canHandleRemotePush:`方法，不同的视图控制器可根据需求选择处理或不处理推送消息
 
 ###使用
 
