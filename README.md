@@ -38,7 +38,7 @@ UIViewController+SGPush|提供`canHandleRemotePush:`方法，不同的视图控�
 [SGPush handleRemotePush:userInfo];
 ```   
 ####4. 测试
-通过以上几部，当服务器向设备发送的推送内容 `{"aps":{"alert":"This is a test message.","messageId":100,},}` 时，SGPush 会创建 MessagePushHandler 对象并执行。若推送内容中没有 messageId 字段时，SGPush 会创建 DefaultPushHandler 对象执行推送处理逻辑。
+通过以上几部，当服务器向设备发送的推送内容 `{"aps":{"alert":"This is a test message.","messageId":100}}` 时，SGPush 会创建 MessagePushHandler 对象并执行。若推送内容中没有 messageId 字段时，SGPush 会创建 DefaultPushHandler 对象执行推送处理逻辑。
 
 ###更多
 通过 SGPush 还可以实现更多灵活的推送处理方式，请参考 Demo 中的注释和 SGPush 源码注释。
